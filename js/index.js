@@ -17,14 +17,14 @@ function getCoord(e) {
 	span.textContent = email.value.substr(carPos) || '.';
 	div.appendChild(span);
 	
-	emailCoords = getPosition(email);							//console.log("emailCoords.x: " + emailCoords.x + ", emailCoords.y: " + emailCoords.y);
-	caretCoords = getPosition(span);							//console.log("caretCoords.x " + caretCoords.x + ", caretCoords.y: " + caretCoords.y);
-	centerCoords = getPosition(mySVG);							//console.log("centerCoords.x: " + centerCoords.x);
+	emailCoords = getPosition(email);							
+	caretCoords = getPosition(span);							
+	centerCoords = getPosition(mySVG);							
 	svgCoords = getPosition(mySVG);
-	screenCenter = centerCoords.x + (mySVG.offsetWidth / 2);		//console.log("screenCenter: " + screenCenter);
-	caretPos = caretCoords.x + emailCoords.x;					//console.log("caretPos: " + caretPos);
+	screenCenter = centerCoords.x + (mySVG.offsetWidth / 2);		
+	caretPos = caretCoords.x + emailCoords.x;					
 	
-	dFromC = screenCenter - caretPos; 							//console.log("dFromC: " + dFromC);
+	dFromC = screenCenter - caretPos; 							
 	var pFromC = Math.round((caretPos / screenCenter) * 100) / 100;
 	if(pFromC < 1) {
 		
@@ -95,7 +95,6 @@ function onEmailInput(e) {
 	if(curEmailIndex > 0) {
 		if(flag = "not-typing") {
 			flag = "typing";
-			//TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthMediumBG, shapeIndex: 8, ease: Expo.easeOut});
 			TweenMax.to(tooth, 1, {x: 0, y: 0, ease: Expo.easeOut});
 			TweenMax.to(tongue, 1, {x: 0, y: 1, ease: Expo.easeOut});
 			TweenMax.to([eyeL, eyeR], 1, {scaleX: .85, scaleY: .85, ease: Expo.easeOut});
@@ -103,7 +102,6 @@ function onEmailInput(e) {
 		
 	} else {
 		flag = "not-typing";
-		//TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthSmallBG, shapeIndex: 9, ease: Expo.easeOut});
 		TweenMax.to(tooth, 1, {x: 0, y: 0, ease: Expo.easeOut});
 		TweenMax.to(tongue, 1, {y: 0, ease: Expo.easeOut});
 		TweenMax.to([eyeL, eyeR], 1, {scaleX: 1, scaleY: 1, ease: Expo.easeOut});
