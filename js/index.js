@@ -95,27 +95,15 @@ function onEmailInput(e) {
 	if(curEmailIndex > 0) {
 		if(mouthStatus == "small") {
 			mouthStatus = "medium";
-			TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthMediumBG, shapeIndex: 8, ease: Expo.easeOut});
+			//TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthMediumBG, shapeIndex: 8, ease: Expo.easeOut});
 			TweenMax.to(tooth, 1, {x: 0, y: 0, ease: Expo.easeOut});
 			TweenMax.to(tongue, 1, {x: 0, y: 1, ease: Expo.easeOut});
 			TweenMax.to([eyeL, eyeR], 1, {scaleX: .85, scaleY: .85, ease: Expo.easeOut});
 		}
-		if(value.includes("@")) {
-			mouthStatus = "large";
-			TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthLargeBG, ease: Expo.easeOut});
-			TweenMax.to(tooth, 1, {x: 3, y: -2, ease: Expo.easeOut});
-			TweenMax.to(tongue, 1, {y: 2, ease: Expo.easeOut});
-			TweenMax.to([eyeL, eyeR], 1, {scaleX: .65, scaleY: .65, ease: Expo.easeOut, transformOrigin: "center center"});
-		} else {
-			mouthStatus = "medium";
-			TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthMediumBG, ease: Expo.easeOut});
-			TweenMax.to(tooth, 1, {x: 0, y: 0, ease: Expo.easeOut});
-			TweenMax.to(tongue, 1, {x: 0, y: 1, ease: Expo.easeOut});
-			TweenMax.to([eyeL, eyeR], 1, {scaleX: .85, scaleY: .85, ease: Expo.easeOut});
-		}
+		
 	} else {
 		mouthStatus = "small";
-		TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthSmallBG, shapeIndex: 9, ease: Expo.easeOut});
+		//TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthSmallBG, shapeIndex: 9, ease: Expo.easeOut});
 		TweenMax.to(tooth, 1, {x: 0, y: 0, ease: Expo.easeOut});
 		TweenMax.to(tongue, 1, {y: 0, ease: Expo.easeOut});
 		TweenMax.to([eyeL, eyeR], 1, {scaleX: 1, scaleY: 1, ease: Expo.easeOut});
