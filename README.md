@@ -1,8 +1,8 @@
 # InteractiveLoginForm
 
-Login form with an SVG avatar that responds to the input in the email field! Guranteed to make end users fall in love with this cute yeti.
+Login form with an SVG avatar that responds to the input in the email field! Guranteed to make end users fall in love with this cute yeti. Email validation is basic and added just to get this prototype working.
 
-P.S- Email validation is basic and added just to get this prototype working.
+Stable release at branch master.
 
 # Demo
 
